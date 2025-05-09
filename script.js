@@ -117,3 +117,14 @@ arrowLeft.addEventListener('click', () => {
 
   activePortfolio();
 });
+function showSection(section) {
+  // Hide all sections
+  var sections = document.querySelectorAll('.resume-detail');
+  sections.forEach(function (sec) {
+    sec.classList.remove('active');
+  });
+
+  // Show the selected section
+  var activeSection = document.querySelector(`.${section}`);
+  activeSection.classList.add('active');
+}
